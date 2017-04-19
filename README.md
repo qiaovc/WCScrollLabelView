@@ -1,7 +1,7 @@
 # WCScrollLabelView
 上下滚动的label
 
-# 使用
+## 使用
 ```objc
 
     NSArray *titles = @[@"这是第一条这是第一条这是第一条这是第一条",@"这是第二条",@"这是第三条",@"这是第四条"];
@@ -35,3 +35,6 @@
 
 
 ```
+## 效果图
+ ![image](https://github.com/Verchen/WCScrollLabelView/raw/master/效果图.gif)
+
