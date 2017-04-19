@@ -35,7 +35,7 @@
     //设置滚动动画时间
     scrollLabelView.animationDuration = 1.f;
     [self.view addSubview:scrollLabelView];
-    
+    //开始滚动
     [scrollLabelView beginScrolling];
 }
 - (void)scrollLabelView:(WCScrollLabelView *)scrollLabelView didClickAtIndex:(NSInteger)index
