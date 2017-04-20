@@ -15,7 +15,7 @@
 		162E24671EA753CA0007764B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162E24651EA753CA0007764B /* LaunchScreen.storyboard */; };
 		162E24721EA753CA0007764B /* WCScrollLabelViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E24711EA753CA0007764B /* WCScrollLabelViewDemoTests.m */; };
 		162E247D1EA753CA0007764B /* WCScrollLabelViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E247C1EA753CA0007764B /* WCScrollLabelViewDemoUITests.m */; };
-		162E24951EA85C140007764B /* WCScrollLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E24941EA85C140007764B /* WCScrollLabelView.m */; };
+		162E249D1EA8A8510007764B /* WCScrollLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E249C1EA8A8510007764B /* WCScrollLabelView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		162E24781EA753CA0007764B /* WCScrollLabelViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WCScrollLabelViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		162E247C1EA753CA0007764B /* WCScrollLabelViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCScrollLabelViewDemoUITests.m; sourceTree = "<group>"; };
 		162E247E1EA753CA0007764B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		162E24931EA85C140007764B /* WCScrollLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCScrollLabelView.h; sourceTree = "<group>"; };
-		162E24941EA85C140007764B /* WCScrollLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCScrollLabelView.m; sourceTree = "<group>"; };
+		162E249B1EA8A8510007764B /* WCScrollLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCScrollLabelView.h; sourceTree = "<group>"; };
+		162E249C1EA8A8510007764B /* WCScrollLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCScrollLabelView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		162E244B1EA753CA0007764B = {
 			isa = PBXGroup;
 			children = (
-				162E24921EA85C140007764B /* WCScrollLabelView */,
+				162E249A1EA8A8510007764B /* WCScrollLabelView */,
 				162E24561EA753CA0007764B /* WCScrollLabelViewDemo */,
 				162E24701EA753CA0007764B /* WCScrollLabelViewDemoTests */,
 				162E247B1EA753CA0007764B /* WCScrollLabelViewDemoUITests */,
@@ -144,11 +144,11 @@
 			path = WCScrollLabelViewDemoUITests;
 			sourceTree = "<group>";
 		};
-		162E24921EA85C140007764B /* WCScrollLabelView */ = {
+		162E249A1EA8A8510007764B /* WCScrollLabelView */ = {
 			isa = PBXGroup;
 			children = (
-				162E24931EA85C140007764B /* WCScrollLabelView.h */,
-				162E24941EA85C140007764B /* WCScrollLabelView.m */,
+				162E249B1EA8A8510007764B /* WCScrollLabelView.h */,
+				162E249C1EA8A8510007764B /* WCScrollLabelView.m */,
 			);
 			path = WCScrollLabelView;
 			sourceTree = "<group>";
@@ -291,7 +291,7 @@
 			files = (
 				162E245F1EA753CA0007764B /* ViewController.m in Sources */,
 				162E245C1EA753CA0007764B /* AppDelegate.m in Sources */,
-				162E24951EA85C140007764B /* WCScrollLabelView.m in Sources */,
+				162E249D1EA8A8510007764B /* WCScrollLabelView.m in Sources */,
 				162E24591EA753CA0007764B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
