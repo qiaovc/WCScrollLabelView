@@ -1,12 +1,6 @@
 # WCScrollLabelView
 上下滚动的label
 
-##导入
-```ruby
-pod 'WCScrollLabelView'
-
-```
-
 ## 使用
 ```objc
 
