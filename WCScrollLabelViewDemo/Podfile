@@ -6,7 +6,6 @@ target 'WCScrollLabelViewDemo' do
   # use_frameworks!
 
   # Pods for WCScrollLabelViewDemo
-	pod 'WCScrollLabelView'
   target 'WCScrollLabelViewDemoTests' do
     inherit! :search_paths
     # Pods for testing
