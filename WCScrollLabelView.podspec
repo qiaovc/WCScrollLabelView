@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WCScrollLabelView"
-  s.version      = "0.0.2"
+  s.version      = "0.2"
   s.summary      = "scrollLabel for iOS."
 
   s.description  = <<-DESC
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "qiao" => "iosqiao@qq.com" }
   s.source       = { :git => "https://github.com/Verchen/WCScrollLabelView.git", :tag => s.version }
-  s.source_files  = "Classes/*.{h,m}"
+  s.source_files  = "*.{h,m}"
   s.requires_arc = true
 end

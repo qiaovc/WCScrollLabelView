@@ -32,6 +32,14 @@
  */
 @property (nonatomic, strong) UIColor *titleColor;
 /**
+ 文字对齐
+ */
+@property (nonatomic, assign) NSTextAlignment textAligment;
+/**
+ 内边距
+ */
+@property (nonatomic, assign) UIEdgeInsets contentInsets;
+/**
  停留时间 默认2s
  */
 @property (nonatomic, assign) CGFloat stayInterval;

@@ -9,6 +9,10 @@
 #import "WCScrollLabelView.h"
 @interface WCScrollLabelView ()
 /**
+ 容器view
+ */
+@property (nonatomic, strong) UIView *container;
+/**
  正在显示的label
  */
 @property (nonatomic, strong) UILabel *currentLabel;
@@ -35,41 +39,33 @@
         _currentIndex = 0;
         _stayInterval = 2;
         _animationDuration = 0.5;
-        self.clipsToBounds = YES;
-        [self setSubviews];
+        _contentInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+        [self addSubview:self.container];
+        [self.container addSubview:self.currentLabel];
+        [self.container addSubview:self.willShowLabel];
         [self setTapGesture];
     }
     return self;
 }
-- (void)setSubviews
-{
-    _currentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
-    _willShowLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
-    [self addSubview:_currentLabel];
-    [self addSubview:_willShowLabel];
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    
+    self.container.frame = CGRectMake(_contentInsets.left,
+                                      _contentInsets.top,
+                                      CGRectGetWidth(self.frame) - _contentInsets.left - _contentInsets.right,
+                                      CGRectGetHeight(self.frame) - _contentInsets.top - _contentInsets.bottom);
+    
+    self.currentLabel.frame = CGRectMake(0,
+                                         0,
+                                         CGRectGetWidth(self.container.frame),
+                                         CGRectGetHeight(self.container.frame));
+    self.willShowLabel.frame = CGRectMake(0,
+                                          CGRectGetHeight(self.container.frame),
+                                          CGRectGetWidth(self.container.frame),
+                                          CGRectGetHeight(self.container.frame));
 }
-- (void)setTitleArray:(NSArray *)titleArray
-{
-    _titleArray = titleArray;
-    if (titleArray&&titleArray.count) {
-        _currentLabel.text = [titleArray firstObject];
-        if (titleArray.count>1) {
-            _willShowLabel.text = titleArray[1];
-        }
-    }
-}
-- (void)setTitleFont:(UIFont *)titleFont
-{
-    _titleFont = titleFont;
-    self.currentLabel.font = titleFont;
-    self.willShowLabel.font = titleFont;
-}
-- (void)setTitleColor:(UIColor *)titleColor
-{
-    _titleColor = titleColor;
-    self.currentLabel.textColor = titleColor;
-    self.willShowLabel.textColor = titleColor;
-}
+
 - (void)beginScrolling
 {
     if (self.titleArray.count<2) {
@@ -80,14 +76,25 @@
 - (void)creatTimer
 {
     _timer = [NSTimer scheduledTimerWithTimeInterval:self.stayInterval target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
+    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+    [runLoop addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 - (void)startTimer
 {
     [UIView animateWithDuration:0.5 animations:^{
-        _currentLabel.frame = CGRectMake(0, -self.frame.size.height, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
-        _willShowLabel.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+        _currentLabel.frame = CGRectMake(0,
+                                         -CGRectGetHeight(self.container.frame),
+                                         CGRectGetWidth(_currentLabel.frame),
+                                         CGRectGetHeight(_currentLabel.frame));
+        _willShowLabel.frame = CGRectMake(0,
+                                          0,
+                                          CGRectGetWidth(_willShowLabel.frame),
+                                          CGRectGetHeight(_willShowLabel.frame));
     } completion:^(BOOL finished) {
-        _currentLabel.frame = CGRectMake(0, self.frame.size.height, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+        _currentLabel.frame = CGRectMake(0,
+                                         CGRectGetHeight(self.container.frame),
+                                         CGRectGetWidth(_currentLabel.frame),
+                                         CGRectGetHeight(_currentLabel.frame));
         UILabel *label = _willShowLabel;
         _willShowLabel = _currentLabel;
         _currentLabel = label;
@@ -114,6 +121,62 @@
     if (_delegate && [_delegate respondsToSelector:@selector(scrollLabelView:didClickAtIndex:)]) {
         [self.delegate scrollLabelView:self didClickAtIndex:_currentIndex];
     }
+}
+
+//MARK: - setter
+- (void)setTitleArray:(NSArray *)titleArray
+{
+    _titleArray = titleArray;
+    if (titleArray&&titleArray.count) {
+        _currentLabel.text = [titleArray firstObject];
+        if (titleArray.count>1) {
+            _willShowLabel.text = titleArray[1];
+        }
+    }
+}
+- (void)setTitleFont:(UIFont *)titleFont
+{
+    _titleFont = titleFont;
+    self.currentLabel.font = titleFont;
+    self.willShowLabel.font = titleFont;
+}
+- (void)setTitleColor:(UIColor *)titleColor
+{
+    _titleColor = titleColor;
+    self.currentLabel.textColor = titleColor;
+    self.willShowLabel.textColor = titleColor;
+}
+- (void)setTextAligment:(NSTextAlignment)textAligment
+{
+    _textAligment = textAligment;
+    self.currentLabel.textAlignment = textAligment;
+    self.willShowLabel.textAlignment = textAligment;
+}
+- (void)setContentInsets:(UIEdgeInsets)contentInsets{
+    _contentInsets = contentInsets;
+}
+//MARK: - getter
+- (UIView *)container{
+    if (!_container) {
+        UIView *cont = [UIView new];
+        cont.clipsToBounds = YES;
+        _container = cont;
+    }
+    return _container;
+}
+- (UILabel *)currentLabel{
+    if (!_currentLabel) {
+        UILabel *label = [[UILabel alloc] init];
+        _currentLabel = label;
+    }
+    return _currentLabel;
+}
+- (UILabel *)willShowLabel{
+    if (!_willShowLabel) {
+        UILabel *label = [[UILabel alloc] init];
+        _willShowLabel = label;
+    }
+    return _willShowLabel;
 }
 
 @end
