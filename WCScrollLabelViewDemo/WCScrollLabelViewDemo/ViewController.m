@@ -22,7 +22,7 @@
     
     NSArray *titles = @[@"这是第一条这是第一条这是第一条这是第一条",@"这是第二条",@"这是第三条",@"这是第四条"];
     
-    scrollLabelView = [[WCScrollLabelView alloc] initWithFrame:CGRectMake(50, 100, 200, 20)];
+    scrollLabelView = [[WCScrollLabelView alloc] initWithFrame:CGRectMake(50, 100, 200, 50)];
     scrollLabelView.backgroundColor = [UIColor whiteColor];
     scrollLabelView.delegate = self;
     scrollLabelView.titleArray = titles;
@@ -34,6 +34,10 @@
     scrollLabelView.stayInterval = 3.f;
     //设置滚动动画时间
     scrollLabelView.animationDuration = 1.f;
+    //设置对齐方式
+    scrollLabelView.textAligment = NSTextAlignmentCenter;
+    //设置内边距
+    scrollLabelView.contentInsets = UIEdgeInsetsMake(5, 10, 5, 10);
     [self.view addSubview:scrollLabelView];
     //开始滚动
     [scrollLabelView beginScrolling];
