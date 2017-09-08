@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WCScrollLabelView"
-  s.version      = "0.2"
+  s.version      = "0.2.1"
   s.summary      = "scrollLabel for iOS."
 
   s.description  = <<-DESC

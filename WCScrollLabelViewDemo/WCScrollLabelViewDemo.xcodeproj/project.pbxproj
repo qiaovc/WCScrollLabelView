@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B030F41E779DD33120529E5 /* libPods-WCScrollLabelViewDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 552A228562985D36B36D4CB5 /* libPods-WCScrollLabelViewDemoUITests.a */; };
 		162E24591EA753CA0007764B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E24581EA753CA0007764B /* main.m */; };
 		162E245C1EA753CA0007764B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E245B1EA753CA0007764B /* AppDelegate.m */; };
 		162E245F1EA753CA0007764B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E245E1EA753CA0007764B /* ViewController.m */; };
@@ -17,8 +16,6 @@
 		162E24721EA753CA0007764B /* WCScrollLabelViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E24711EA753CA0007764B /* WCScrollLabelViewDemoTests.m */; };
 		162E247D1EA753CA0007764B /* WCScrollLabelViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E247C1EA753CA0007764B /* WCScrollLabelViewDemoUITests.m */; };
 		162E24A51EA8B2950007764B /* WCScrollLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E24A41EA8B2950007764B /* WCScrollLabelView.m */; };
-		4CDC32FDA253DB5DDA7CF42B /* libPods-WCScrollLabelViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1915455CCD9769DCE210E /* libPods-WCScrollLabelViewDemoTests.a */; };
-		CA6F457A78FFF4C58E373895 /* libPods-WCScrollLabelViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0D5C7C111D68250E371E17 /* libPods-WCScrollLabelViewDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07C1915455CCD9769DCE210E /* libPods-WCScrollLabelViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCScrollLabelViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		162E24541EA753CA0007764B /* WCScrollLabelViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCScrollLabelViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		162E24581EA753CA0007764B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		162E245A1EA753CA0007764B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,14 +54,6 @@
 		162E247E1EA753CA0007764B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		162E24A31EA8B2950007764B /* WCScrollLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCScrollLabelView.h; sourceTree = "<group>"; };
 		162E24A41EA8B2950007764B /* WCScrollLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCScrollLabelView.m; sourceTree = "<group>"; };
-		1E327623D52EE0DCCE7ABE69 /* Pods-WCScrollLabelViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCScrollLabelViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCScrollLabelViewDemo/Pods-WCScrollLabelViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		41A293B93B5007F5D389BF4E /* Pods-WCScrollLabelViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCScrollLabelViewDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCScrollLabelViewDemoTests/Pods-WCScrollLabelViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		552A228562985D36B36D4CB5 /* libPods-WCScrollLabelViewDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCScrollLabelViewDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		94542CF5CCE6594014D1C2E1 /* Pods-WCScrollLabelViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCScrollLabelViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCScrollLabelViewDemo/Pods-WCScrollLabelViewDemo.release.xcconfig"; sourceTree = "<group>"; };
-		C398C04B6A573691365571FA /* Pods-WCScrollLabelViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCScrollLabelViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCScrollLabelViewDemoTests/Pods-WCScrollLabelViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		CD0D5C7C111D68250E371E17 /* libPods-WCScrollLabelViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCScrollLabelViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB71BC994DF285E062CED56A /* Pods-WCScrollLabelViewDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCScrollLabelViewDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCScrollLabelViewDemoUITests/Pods-WCScrollLabelViewDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		EB92D9FB1A6D2D26127C943E /* Pods-WCScrollLabelViewDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCScrollLabelViewDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCScrollLabelViewDemoUITests/Pods-WCScrollLabelViewDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA6F457A78FFF4C58E373895 /* libPods-WCScrollLabelViewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CDC32FDA253DB5DDA7CF42B /* libPods-WCScrollLabelViewDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B030F41E779DD33120529E5 /* libPods-WCScrollLabelViewDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +88,6 @@
 				162E24701EA753CA0007764B /* WCScrollLabelViewDemoTests */,
 				162E247B1EA753CA0007764B /* WCScrollLabelViewDemoUITests */,
 				162E24551EA753CA0007764B /* Products */,
-				B1D8132F41469B4065E4043E /* Pods */,
-				B25A5F0375A829915ECB03A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,29 +153,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		B1D8132F41469B4065E4043E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1E327623D52EE0DCCE7ABE69 /* Pods-WCScrollLabelViewDemo.debug.xcconfig */,
-				94542CF5CCE6594014D1C2E1 /* Pods-WCScrollLabelViewDemo.release.xcconfig */,
-				41A293B93B5007F5D389BF4E /* Pods-WCScrollLabelViewDemoTests.debug.xcconfig */,
-				C398C04B6A573691365571FA /* Pods-WCScrollLabelViewDemoTests.release.xcconfig */,
-				DB71BC994DF285E062CED56A /* Pods-WCScrollLabelViewDemoUITests.debug.xcconfig */,
-				EB92D9FB1A6D2D26127C943E /* Pods-WCScrollLabelViewDemoUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B25A5F0375A829915ECB03A3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CD0D5C7C111D68250E371E17 /* libPods-WCScrollLabelViewDemo.a */,
-				07C1915455CCD9769DCE210E /* libPods-WCScrollLabelViewDemoTests.a */,
-				552A228562985D36B36D4CB5 /* libPods-WCScrollLabelViewDemoUITests.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,12 +160,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 162E24811EA753CA0007764B /* Build configuration list for PBXNativeTarget "WCScrollLabelViewDemo" */;
 			buildPhases = (
-				DD0DFB4D6257B454FA09C8EF /* [CP] Check Pods Manifest.lock */,
 				162E24501EA753CA0007764B /* Sources */,
 				162E24511EA753CA0007764B /* Frameworks */,
 				162E24521EA753CA0007764B /* Resources */,
-				47F1CBE09A4CE7293342D6A7 /* [CP] Embed Pods Frameworks */,
-				4279BFAA51918399DD41ED30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -364,36 +321,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCScrollLabelViewDemoUITests/Pods-WCScrollLabelViewDemoUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4279BFAA51918399DD41ED30 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCScrollLabelViewDemo/Pods-WCScrollLabelViewDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		47F1CBE09A4CE7293342D6A7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCScrollLabelViewDemo/Pods-WCScrollLabelViewDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5DF5B7D1CBC0F8DD6009B170 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,21 +364,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCScrollLabelViewDemoTests/Pods-WCScrollLabelViewDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD0DFB4D6257B454FA09C8EF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F0BCCF26EFCD310EB5CFE26B /* [CP] Check Pods Manifest.lock */ = {
@@ -628,7 +540,6 @@
 		};
 		162E24821EA753CA0007764B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E327623D52EE0DCCE7ABE69 /* Pods-WCScrollLabelViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZY88EWA94M;
@@ -642,7 +553,6 @@
 		};
 		162E24831EA753CA0007764B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94542CF5CCE6594014D1C2E1 /* Pods-WCScrollLabelViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZY88EWA94M;
@@ -656,7 +566,6 @@
 		};
 		162E24851EA753CA0007764B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41A293B93B5007F5D389BF4E /* Pods-WCScrollLabelViewDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = ZY88EWA94M;
@@ -670,7 +579,6 @@
 		};
 		162E24861EA753CA0007764B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C398C04B6A573691365571FA /* Pods-WCScrollLabelViewDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = ZY88EWA94M;
@@ -684,7 +592,6 @@
 		};
 		162E24881EA753CA0007764B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB71BC994DF285E062CED56A /* Pods-WCScrollLabelViewDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = ZY88EWA94M;
 				INFOPLIST_FILE = WCScrollLabelViewDemoUITests/Info.plist;
@@ -697,7 +604,6 @@
 		};
 		162E24891EA753CA0007764B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB92D9FB1A6D2D26127C943E /* Pods-WCScrollLabelViewDemoUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = ZY88EWA94M;
 				INFOPLIST_FILE = WCScrollLabelViewDemoUITests/Info.plist;
