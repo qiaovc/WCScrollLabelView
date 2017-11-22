@@ -32,20 +32,34 @@
 @end
 
 @implementation WCScrollLabelView
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setupSubviews];
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _currentIndex = 0;
-        _stayInterval = 2;
-        _animationDuration = 0.5;
-        _contentInsets = UIEdgeInsetsMake(0, 5, 0, 5);
-        [self addSubview:self.container];
-        [self.container addSubview:self.currentLabel];
-        [self.container addSubview:self.willShowLabel];
-        [self setTapGesture];
+        [self setupSubviews];
     }
     return self;
+}
+
+- (void)setupSubviews
+{
+    _currentIndex = 0;
+    _stayInterval = 2;
+    _animationDuration = 0.5;
+    _contentInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+    [self addSubview:self.container];
+    [self.container addSubview:self.currentLabel];
+    [self.container addSubview:self.willShowLabel];
+    [self setTapGesture];
 }
 
 - (void)layoutSubviews{
@@ -69,15 +83,24 @@
 - (void)beginScrolling
 {
     if (self.titleArray.count<2) {
+        if (self.titleArray.count) {
+            self.currentLabel.text = [self.titleArray firstObject];
+        }
         return;
     }
+    
+    _currentIndex = 0;
     [self creatTimer];
 }
 - (void)creatTimer
 {
-    _timer = [NSTimer scheduledTimerWithTimeInterval:self.stayInterval target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
-    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-    [runLoop addTimer:_timer forMode:NSRunLoopCommonModes];
+    if (nil == _timer) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:self.stayInterval target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
+        NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+        [runLoop addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
+    
+    
 }
 - (void)startTimer
 {
@@ -177,6 +200,14 @@
         _willShowLabel = label;
     }
     return _willShowLabel;
+}
+
+- (void)dealloc
+{
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
 }
 
 @end
