@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class WCScrollLabelView;
-@protocol scrollLabelViewDelegate <NSObject>
+@protocol WCScrollLabelViewDelegate <NSObject>
 
 - (void)scrollLabelView:(WCScrollLabelView *)scrollLabelView didClickAtIndex:(NSInteger)index;
 
@@ -18,7 +18,7 @@
 /**
  代理
  */
-@property (nonatomic, weak) id<scrollLabelViewDelegate> delegate;
+@property (nonatomic, weak) id<WCScrollLabelViewDelegate> delegate;
 /**
  标题数组
  */

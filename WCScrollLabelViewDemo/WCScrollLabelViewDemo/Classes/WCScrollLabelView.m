@@ -68,9 +68,6 @@
 
 - (void)beginScrolling
 {
-    if (self.titleArray.count<2) {
-        return;
-    }
     [self creatTimer];
 }
 - (void)creatTimer
@@ -81,6 +78,9 @@
 }
 - (void)startTimer
 {
+    if (self.titleArray.count < 2) {
+        return;
+    }
     [UIView animateWithDuration:0.5 animations:^{
         _currentLabel.frame = CGRectMake(0,
                                          -CGRectGetHeight(self.container.frame),
@@ -122,7 +122,13 @@
         [self.delegate scrollLabelView:self didClickAtIndex:_currentIndex];
     }
 }
-
+- (void)dealloc
+{
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
 //MARK: - setter
 - (void)setTitleArray:(NSArray *)titleArray
 {

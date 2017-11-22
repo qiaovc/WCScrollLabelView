@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "WCScrollLabelView.h"
-@interface ViewController ()<scrollLabelViewDelegate>
+@interface ViewController ()<WCScrollLabelViewDelegate>
 {
     WCScrollLabelView *scrollLabelView;
 }
@@ -46,7 +46,6 @@
 {
     NSLog(@"点击%zd",index);
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
