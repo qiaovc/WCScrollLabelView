@@ -32,9 +32,9 @@
 @end
 
 @implementation WCScrollLabelView
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
         _currentIndex = 0;
         _stayInterval = 2;
@@ -69,15 +69,24 @@
 - (void)beginScrolling
 {
     if (self.titleArray.count<2) {
+        if (self.titleArray.count) {
+            self.currentLabel.text = [self.titleArray firstObject];
+        }
         return;
     }
+    
+    _currentIndex = 0;
     [self creatTimer];
 }
 - (void)creatTimer
 {
-    _timer = [NSTimer scheduledTimerWithTimeInterval:self.stayInterval target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
-    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-    [runLoop addTimer:_timer forMode:NSRunLoopCommonModes];
+    if (nil == _timer) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:self.stayInterval target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
+        NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+        [runLoop addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
+    
+    
 }
 - (void)startTimer
 {
@@ -177,6 +186,14 @@
         _willShowLabel = label;
     }
     return _willShowLabel;
+}
+
+- (void)dealloc
+{
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
 }
 
 @end
