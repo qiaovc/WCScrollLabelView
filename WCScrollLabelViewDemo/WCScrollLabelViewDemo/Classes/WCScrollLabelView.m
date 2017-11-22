@@ -72,9 +72,11 @@
 }
 - (void)creatTimer
 {
-    _timer = [NSTimer scheduledTimerWithTimeInterval:self.stayInterval target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
-    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-    [runLoop addTimer:_timer forMode:NSRunLoopCommonModes];
+    if (_timer == nil) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:self.stayInterval target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
+        NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+        [runLoop addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
 }
 - (void)startTimer
 {
