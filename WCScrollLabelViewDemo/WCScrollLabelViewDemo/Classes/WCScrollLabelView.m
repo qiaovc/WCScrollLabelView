@@ -36,16 +36,30 @@
 {
     self = [super init];
     if (self) {
-        _currentIndex = 0;
-        _stayInterval = 2;
-        _animationDuration = 0.5;
-        _contentInsets = UIEdgeInsetsMake(0, 5, 0, 5);
-        [self addSubview:self.container];
-        [self.container addSubview:self.currentLabel];
-        [self.container addSubview:self.willShowLabel];
-        [self setTapGesture];
+        [self setupSubviews];
     }
     return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupSubviews];
+    }
+    return self;
+}
+
+- (void)setupSubviews
+{
+    _currentIndex = 0;
+    _stayInterval = 2;
+    _animationDuration = 0.5;
+    _contentInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+    [self addSubview:self.container];
+    [self.container addSubview:self.currentLabel];
+    [self.container addSubview:self.willShowLabel];
+    [self setTapGesture];
 }
 
 - (void)layoutSubviews{

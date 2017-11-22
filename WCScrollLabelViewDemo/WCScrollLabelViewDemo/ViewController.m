@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "WCScrollLabelView.h"
-@interface ViewController ()<scrollLabelViewDelegate>
+@interface ViewController ()<WCScrollLabelViewDelegate>
 {
     WCScrollLabelView *scrollLabelView;
 }
